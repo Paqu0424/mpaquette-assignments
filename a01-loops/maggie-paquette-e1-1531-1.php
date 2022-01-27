@@ -30,4 +30,4 @@ echo nl2br("\n" . $fname_arr[1] . " " . $lname_arr[1] . " is " . $age_arr[1]);
 /*
 TASK 04
 */
-echo nl2br("\n\n" . $sum);
+echo nl2br("\n\nThe sum of all array elements is " . $sum);
