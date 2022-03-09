@@ -1,0 +1,89 @@
+/* #DDD
+
+#F5F5F5
+
+#6495ED */
+
+html {
+  font-family: Arial, Helvetica, 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  background: white;
+  --border-radius: 0.2rem;
+}
+
+body {
+  padding: 1rem;
+}
+
+.form {
+  background: #f5f5f5;
+  border-color: #ddd;
+  border-radius: var(--border-radius);
+  margin: auto;
+  max-width: 50rem;
+  padding-block: 1rem;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-areas:
+    'name'
+    'email'
+    'message';
+  gap: 1rem;
+}
+
+.form-name {
+  grid-area: name;
+}
+
+.form-email {
+  grid-area: email;
+}
+
+.form-message {
+  grid-area: message;
+}
+
+.form-title {
+  background: white;
+  font-size: 2rem;
+  border: 1px solid #ddd;
+  padding: 0.3em 0.5em;
+}
+
+.form-control {
+  background: white;
+  border-color: #ddd;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.form-submit {
+  background: #6495ed;
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5em 1em;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form-submit:hover {
+  filter: brightness(0.9);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 480px) {
+  .form-layout {
+    grid-template-areas:
+      'name    email'
+      'message message';
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-submit {
+    width: auto;
+  }
+}
